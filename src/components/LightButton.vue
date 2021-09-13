@@ -1,26 +1,24 @@
 <template>
   <div>
-   <button v-on:click="toggleText"> {{ textIsVisible ? 'hide ': 'show '}}text</button>
-     
-          toggleText(){this.textIsVisible = !this.textIsVisible},
-    // invisible(){this.showButton = !this.showButton,
-    // this.hideButton = !this.hideButton},
-
-    // isLightOn(){this.lightButton = !this.lightButton,
-    // this.darkButton = !this.darkButton},
-    //   if (darkbutton) 
-    //   { 
-        
-    //   }
+   <button v-bind:class="{black: !isLightOn}" v-on:click="toggleLight"> Light switch</button>
   </div>
 </template>
 
 <script>
 export default {
+  data:() => ({
+      isLightOn: true
+  }),
 
+  methods:{
+    toggleLight(){this.isLightOn  = !this.isLightOn
+    }
+  }
 }
 </script>
 
 <style>
-
+.black{
+    background-color:#2d2d2e
+}
 </style>

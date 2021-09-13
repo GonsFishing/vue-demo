@@ -2,6 +2,7 @@
   <div class="Main">
     <counter></counter>
     <invisible-text></invisible-text>
+    <light-button></light-button>
    
     <!-- <button v-show="hideButton" v-on:click="invisible" >now you don't</button>
     <button v-show="lightButton" v-on:click="isLightOn">lights On</button>
@@ -12,18 +13,16 @@
 
 <script>
 import Counter from './Counter.vue'
-import invisibleText from './InvisibleText.vue'
+import InvisibleText from './InvisibleText.vue'
+import LightButton from './LightButton.vue'
 
 export default {
   components: {
     Counter,
-    invisibleText
+    InvisibleText,
+    LightButton
   },
   data: () => ({
-    showButton: true,
-    hideButton: false,
-    lightButton: true,
-    darkButton: false
   }),
 
   methods:{}

@@ -2,7 +2,6 @@
   <div>
     <button v-on:click="toggleText"> {{ textIsVisible ? 'hide ': 'show '}}text</button>
     <span v-show="textIsVisible"> Now you see me </span>
-	<span v-show="!textIsVisible"> Now you don't </span>
   </div>
 </template>
 
